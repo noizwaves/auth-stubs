@@ -3,7 +3,9 @@ Simple OAuth stubs for automated feature tests
 
 ## Quick Start
 
-1) Install Python 3.6
+1) Install Python 3.6.1
+1) Install dependencies via `pip install -r requirements.txt`
+1) Start server via `FLASK_APP=authstubs.py flask run`
 
 ## About
  
@@ -18,3 +20,9 @@ This project has several major goals:
 1) Serve as an example of how major authentication services can be stubbed.
 1) <something about being a ready to go / installable replacement for real services>.
 1) Power a hosted stub service for all to use.
+
+## Deployment
+
+This server is hosted on Pivotal Web Services.
+
+To deploy, run `cf push authstubs`.
