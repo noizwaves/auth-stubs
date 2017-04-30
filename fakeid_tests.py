@@ -1,10 +1,10 @@
-import authstubs
+import fakeid
 import unittest
 
-class AuthStubsTestCase(unittest.TestCase):
+class FakeIdTestCase(unittest.TestCase):
     def setUp(self):
-        authstubs.app.config['TESTING'] = True
-        self.app = authstubs.app.test_client()
+        fakeid.app.config['TESTING'] = True
+        self.app = fakeid.app.test_client()
 
     def test_landing(self):
         result = self.app.get('/')

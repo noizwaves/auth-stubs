@@ -1,11 +1,11 @@
-# auth-stubs
-Simple OAuth stubs for automated feature tests
+# fakeid
+Simple OAuth 2.0 stubs for automated feature tests
 
 ## Quick Start
 
 1) Install Python 3.6.1
 1) Install dependencies via `pip install -r requirements.txt`
-1) Start server via `FLASK_APP=authstubs.py flask run`
+1) Start server via `FLASK_APP=fakeid.py flask run`
 
 ## About
  
@@ -14,7 +14,7 @@ External dependencies should be mocked during feature tests, but often this is n
 It is quicker and easier to deal with real systems that to stub them - this is very true for external authentication systems like OAuth 2.0.
 
 In reality, these services can stubbed easily.
-Auth Stubs is an implementation of these service stubs.
+FakeID is an implementation of these stubs.
 This project has several major goals:
 
 1) Serve as an example of how major authentication services can be stubbed.
@@ -25,4 +25,4 @@ This project has several major goals:
 
 This server is hosted on Pivotal Web Services.
 
-To deploy, run `cf push authstubs`.
+To deploy, run `cf push fakeid`.

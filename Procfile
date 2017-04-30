@@ -1,1 +1,1 @@
-web: gunicorn authstubs:app --bind 0.0.0.0:$PORT
+web: gunicorn fakeid:app --bind 0.0.0.0:$PORT
