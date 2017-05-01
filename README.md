@@ -1,11 +1,12 @@
 # fakeid
-Simple OAuth 2.0 stubs for automated feature tests
+Simple OAuth 2.0 stubs designed for feature testing applications.
 
 ## Quick Start
 
 1) Install Python 3.6.1
 1) Install dependencies via `pip install -r requirements.txt`
 1) Start server via `FLASK_APP=fakeid.py flask run`
+1) Configure your feature tests to authenticate at `http://127.0.0.1:5000/`
 
 ## About
  
@@ -19,7 +20,24 @@ This project has several major goals:
 
 1) Serve as an example of how major authentication services can be stubbed.
 1) <something about being a ready to go / installable replacement for real services>.
-1) Power a hosted stub service for all to use.
+1) Power a hosted service for all to use, namely [https://fakeid.cfapps.io](https://fakeid.cfapps.io).
+
+## Use
+
+To use FakeID with your feature tests, simply configure your application's auth to use a FakeID server.
+
+For example, to configure an ASP.NET Core application using Google Authentication, do:
+
+```csharp
+app.UseGoogleAuthentication(new GoogleOptions()
+{
+    AuthorizationEndpoint = "https://fakeid.cfapps.io/google/oauth2/auth",
+    TokenEndpoint = "https://fakeid.cfapps.io/google/oauth2/token",
+    UserInformationEndpoint = "https://fakeid.cfapps.io/google/oauth2/info"
+});
+```
+
+Now, after "logging in" through "Google", your current user will be Foo Bar.
 
 ## Deployment
 
